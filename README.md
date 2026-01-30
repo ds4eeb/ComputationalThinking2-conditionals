@@ -1,0 +1,91 @@
+Activity 8: Computational thinking 2: conditionals
+================
+
+# Overview
+
+Welcome! This is the second “computational thinking” lesson, which is
+about conditional statements and getting help finding bugs in your R
+code.
+
+------------------------------------------------------------------------
+
+You will submit one output for this activity:
+
+1.  A **PDF** of a rendered Quarto document with all of your R code.
+    Please create a new Quarto document (e.g. don’t use this
+    `README.qmd`), include all of the code that appears in this
+    document, in addition to adding your own code and **answers to all
+    of the questions** in the “Q#” sections. Submit this through
+    Gradescope.
+
+*If you have trouble submitting as a PDF, please ask Calvin or Malin for
+help. If we still can’t solve it, you can submit the .qmd file instead.*
+
+A reminder: **Please label the code** in your final submission in two
+ways: 1) denote your answers to each question using headers that
+correspond to the question you’re answering and 2) thoroughly “comment”
+your code: remember, this means annotating your code directly by typing
+descriptions of what each line does after a `#`. This will help future
+you!
+
+------------------------------------------------------------------------
+
+Let’s start by reading in the relevant packages
+
+``` r
+library(tidyverse)
+library(here)
+```
+
+------------------------------------------------------------------------
+
+# 1. Conditionals
+
+We’ve already worked with conditionals during one of the seaside chats,
+which used `case_when()`, `dplyr's` version of an `if_else` statement.
+Today we’ll walk through using `if_else` statements, the precursor to
+`case_when()`, as well as get more practice with `case_when()`.
+
+## 1.1 if else statements
+
+`if else` statments take the form of:
+
+``` default
+if (condition is true){
+  do something
+} else {
+  do something else
+}
+```
+
+------------------------------------------------------------------------
+
+## 1.2 `case_when()`
+
+------------------------------------------------------------------------
+
+# 2. Getting help in R
+
+Early in your R journey you will likely have errors in your R code more
+often than not, so knowing how to deal with code that doesn’t work as
+you expect is a key part of learning. You have already been asked in
+past lessons to deal with this, by identifying error messages, accessing
+help pages, and going online to .
+
+------------------------------------------------------------------------
+
+## 2.1 Help pages
+
+------------------------------------------------------------------------
+
+## 2.2 Stack overflow
+
+------------------------------------------------------------------------
+
+## 2.3 Traceback()?
+
+------------------------------------------------------------------------
+
+## 2.4 LLMs
+
+------------------------------------------------------------------------
