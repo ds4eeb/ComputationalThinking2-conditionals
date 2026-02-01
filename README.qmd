@@ -9,7 +9,7 @@ editor: source
 
 # Overview
 
-Welcome! This is the second "computational thinking" lesson, which is about conditional statements and getting help finding bugs in your R code.
+Welcome! This is the second "computational thinking" lesson, which continues work on for loops and revisits conditional statements.
 
 ------------------------------------------------------------------------
 
@@ -38,14 +38,147 @@ We've already worked with conditionals during one of the seaside chats, which us
 
 ## 1.1 if else statements
 
-`if else` statments take the form of:
+`if else` statements take the form of:
 
 ``` default
-if (condition is true){
-  do something
+if (condition){
+  code to execute if condition is TRUE
 } else {
-  do something else
+  code to execute if condition is FALSE
 }
+```
+
+For example, below we define x as 5, then write a statement that checks whether or not a statement, `x > 10`, is TRUE. If it's true, it will print out the first part. If not, it will print the second.
+
+```{r}
+x <- 5
+ 
+# Check value is less than or greater than 10 
+if(x > 10)
+{ 
+    print(paste(x, "is greater than 10")) 
+} else
+{ 
+    print(paste(x, "is less than or equal to 10")) 
+}
+```
+
+
+### Q1.1: Modify the value of x
+
+Copy/paste this example by change x to be 11. What is the output of the if else statement?
+
+
+```{r}
+x <- 11
+ 
+# Check if the value of x is less than or equal OR greater than 10 
+if(x > 10)
+{ 
+    print(paste(x, "is greater than 10")) 
+} else
+{ 
+    print(paste(x, "is less than or equal to 10")) 
+}
+
+```
+
+
+---------
+
+Let's make it a little more complex by adding a third conditional. The if else statements in R can be nested together to form multiple statements and will evaluate expressions based on the conditions one by one, beginning from the outer condition to the inner one.
+
+Here, we will make R print one thing if x is less than 10, something else if x is equal to 10, and a third thing if x is greater than 10.
+
+```{r}
+# define a variable
+x <- 10
+
+# check the value of x using nested if-else statements
+if (x < 10) {
+  # if x is less than 10
+  print("x is less than 10")
+} else {
+  # if x is exactly equal to 10
+  if (x == 10) {
+    # if x equals 10
+    print("x is 10!!!")
+  } else {
+    # if x is greater than 10
+    print("x is greater than 10")
+  }
+}
+
+```
+
+Run the statement above with `x = 9`, `x = 10`, and `x = 11` to see what happens.
+
+--------
+
+Let's combine what we learned about for loops with an if else statement. The goal here is to take a vector of numbers, loop through it, and apply our if else statement to each element in the vector, telling us if it's less than, equal to, or greater than 10.
+
+First define a vector to loop through:
+
+```{r}
+vec <- c(10, 11, 9, 10)
+```
+
+Then we start the for loop:
+
+```{r}
+# For 1 through the length of the vector "vec" 
+for (i in 1:length(vec)) {
+  
+# check the value of using nested if-else statements
+if (vec[i] < 10) {
+  # if the element is less than 10
+  print("value is less than 10")
+} else {
+  # if the element is exactly equal to 10
+  if (vec[i] == 10) {
+    # if the element equals 10
+    print("value is 10!!!")
+  } else {
+    # if the element is greater than 10
+    print("value is greater than 10")
+  }
+}
+
+}
+
+```
+
+The for loops iterates through the vector and applies the if else statement separately for each vector element, printing an output for each vector element.
+
+### Q1.2: Create a new for loop + if else statement
+
+Remake a similar for loop / if else statement as above. The for loop should loop through a vector called `y` and should assess whether or not the values are negative, positive, or equal to zero.
+First define a vector to loop through:
+
+```{r}
+# Define the vector
+y <- c(-2, 42, 0, 10)
+
+# For 1 through the length of the vector "y"
+for (i in 1:length(y)) {
+  
+# check the value of using nested if-else statements
+if (y[i] < 0) {
+  # if the element is less than 0
+  print("value is less than 0")
+} else {
+  # if the element is exactly equal to 0
+  if (y[i] == 0) {
+    # if the element equals 0
+    print("value is 0!!!")
+  } else {
+    # if the element is greater than 0
+    print("value is greater than 0")
+  }
+}
+
+}
+
 ```
 
 ---------
