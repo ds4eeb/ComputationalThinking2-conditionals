@@ -17,6 +17,10 @@ You will submit one output for this activity:
 
 1.  A **PDF** of a rendered Quarto document with all of your R code. Please create a new Quarto document (e.g. don't use this `README.qmd`), include all of the code that appears in this document, in addition to adding your own code and **answers to all of the questions** in the "Q#" sections. Submit this through Gradescope.
 
+-   For this activity, we want you to get more GitHub practice: copy this repository to your own GitHub as in the second activity (if you haven't already been doing this). At the end, you will practice pushing your changes back to the repository.
+
+------
+
 *If you have trouble submitting as a PDF, please ask Calvin or Malin for help. If we still can't solve it, you can submit the .qmd file instead.*
 
 A reminder: **Please label the code** in your final submission in two ways: 1) denote your answers to each question using headers that correspond to the question you're answering and 2) thoroughly "comment" your code: remember, this means annotating your code directly by typing descriptions of what each line does after a `#`. This will help future you!
@@ -441,3 +445,8 @@ Apply an if else or case_when in some way to this dataset. Describe what you are
 
 ------
 
+When you have finished, practice the GitHub push/pull:
+
+-   Pull to check for updates to the remote branch
+-   Commit your changes with a commit message
+-   Push your changes to the remote branch
