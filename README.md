@@ -98,21 +98,6 @@ if(x > 10)
 Copy/paste this example but change x to be 11. What is the output of the
 if else statement?
 
-``` r
-x <- 11
-
-# Check if the value of x is greater than 10
-if(x > 10)
-{ 
-  print(paste(x, "is greater than 10")) 
-} else
-{ 
-  print(paste(x, "is less than or equal to 10")) 
-}
-```
-
-    [1] "11 is greater than 10"
-
 ------------------------------------------------------------------------
 
 ### Using `traceback()` for errors
@@ -269,36 +254,6 @@ negative, positive, or equal to zero.
 First define a vector to loop through, then run the for loop / if else
 statement.
 
-``` r
-# Define the vector
-y <- c(-2, 42, 0, 10)
-
-# For 1 through the length of the vector "y"
-for (i in 1:length(y)) {
-  
-  # check the value of using nested if-else statements
-  if (y[i] < 0) {
-    # if the element is less than 0
-    print("value is less than 0")
-  } else {
-    # if the element is exactly equal to 0
-    if (y[i] == 0) {
-      # if the element equals 0
-      print("value is 0!!!")
-    } else {
-      # if the element is greater than 0
-      print("value is greater than 0")
-    }
-  }
-  
-}
-```
-
-    [1] "value is less than 0"
-    [1] "value is greater than 0"
-    [1] "value is 0!!!"
-    [1] "value is greater than 0"
-
 ------------------------------------------------------------------------
 
 ## 1.2 `case_when()` and pikas
@@ -341,11 +296,6 @@ a couple sentences, describe how the researchers measured pika stress,
 including how they did it, what the “stress” variable is called, and
 what the units are.
 
-*Stress was measured by observing the amount of glucocorticoid
-metabolite present in pika feces. The stress variable is
-concentration_pg_m and is the glucocorticoid metabolite (GCM)
-concentration in picogram GCM/gram dry pika feces*
-
 ------------------------------------------------------------------------
 
 ### Q1.4: What does a row represent in this data?
@@ -353,8 +303,6 @@ concentration in picogram GCM/gram dry pika feces*
 What does a row represent in this dataset? Is it an average value from a
 site? From a station? From an individual pika? From an individual pika
 poop? From a subsample of a pika poop?
-
-*Each row is an individual pika poop*
 
 ------------------------------------------------------------------------
 
@@ -433,19 +381,6 @@ head(nwt_pikas_categ %>% select(-c(utm_easting, utm_northing)))
 
 Remake our scatterplot from above, but this time color the points by the
 new category we just made.
-
-``` r
-# Make a scatterplot with jittered points
-nwt_pikas_categ %>% 
-  # We're adding a little placeholder axis just so we can see the point distribution
-  ggplot(aes(x ="Placeholder", 
-             y = concentration_pg_g,
-             color = stress_category)) +
-  # Add the geom_jitter geom
-  geom_jitter(width = 0.1)
-```
-
-![](README_files/figure-commonmark/unnamed-chunk-15-1.png)
 
 Hopefully you can now visualize what that `case_when()` statement did
 with the information we gave it.
@@ -596,5 +531,7 @@ you are doing in comments on each line.
 When you have finished, practice the GitHub push/pull:
 
 - Pull to check for updates to the remote branch
+- Stage your edits (after saving your document!) by checking the
+  documents you’d like to push
 - Commit your changes with a commit message
 - Push your changes to the remote branch
